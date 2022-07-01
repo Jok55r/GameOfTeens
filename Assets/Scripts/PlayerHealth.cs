@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    /*public Image hpBar;
-    public int hp = 100;
+    public Slider slider;
 
-    void Start()
-    {
-        hpBar = GetComponent<Image>();
-    }
+    public int hp = 100;
 
     void Update()
     {
-        hpBar.fillAmount = (float)(hp / 100);
+        slider.value = hp;
+    }
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        hp--;
     }*/
 }
