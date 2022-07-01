@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float speed;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+
+        gameObject.transform.position += new Vector3(x, y, 0f) * speed * Time.deltaTime;
+
+        if (x < 0)
+            gameObject.transform.localScale = new Vector3(-5, 5, 1);
+        else if (x > 0)
+            gameObject.transform.localScale = new Vector3(5, 5, 1);
+
     }
 }
