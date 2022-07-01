@@ -6,12 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
+    private void Update()
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
