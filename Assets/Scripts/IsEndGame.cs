@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndGameFunctional : MonoBehaviour
+public class IsEndGame : MonoBehaviour
 {
-    [SerializeField] GameObject panel;
+    public static bool isGameEnd = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Finish")
         {
-            panel.SetActive(true);
+            isGameEnd = true;
             print("putin pidor");
         }
     }

@@ -6,6 +6,8 @@ public class WinLogic : MonoBehaviour
     [SerializeField] PlayerHealth hp;
     [SerializeField] Timer timer;
 
+    [SerializeField] GameObject panel;
+
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI plusHPText;
     [SerializeField] TextMeshProUGUI plusTimerText;
@@ -16,12 +18,12 @@ public class WinLogic : MonoBehaviour
 
     bool showing;
 
-    void Start()
+    private void Start()
     {
         gameObject.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
         if (gameObject.activeSelf && !showing)
         {
@@ -31,7 +33,7 @@ public class WinLogic : MonoBehaviour
         }
     }
 
-    void StartCount()
+    private void StartCount()
     {
         score = hp.hp + (int)(timeToScoreValue / timer.currentTime);
 
