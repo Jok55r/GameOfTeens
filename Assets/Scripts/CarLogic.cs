@@ -6,11 +6,12 @@ public class CarLogic : MonoBehaviour
     [SerializeField] Movement car;
 
     [SerializeField] GameObject playerObj;
-    bool isIn;
+
+    public static bool canRide = true;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && canRide)
         {
             player.canMove = !player.canMove;
             car.canMove = !car.canMove;
