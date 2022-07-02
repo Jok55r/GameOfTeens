@@ -28,9 +28,4 @@ public class Timer : MonoBehaviour
     {
         timerActive = true;
     }
-
-    public void StopTimer()
-    {
-        timerActive = false;
-    }
 }

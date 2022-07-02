@@ -9,6 +9,13 @@ public class Movement : MonoBehaviour
 
     public bool isInTriggerOfCar;
 
+    private void Start()
+    {
+        gameObject.SetActive(true);
+        if (isPlayer)
+            canMove = true;
+    }
+
     private void FixedUpdate()
     {
         isInTriggerOfCar = false;
@@ -16,6 +23,9 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerHealth.hp <= 0)
+            canMove = false;
+
         if (!canMove)
             return;
 

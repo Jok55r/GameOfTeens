@@ -9,6 +9,11 @@ public class CarLogic : MonoBehaviour
 
     public static bool canRide = true;
 
+    private void Start()
+    {
+        canRide = true;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && canRide)

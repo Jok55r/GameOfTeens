@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +15,16 @@ public class MenuFunctional : MonoBehaviour
     {
         clickEffect.Play();
         SceneManager.LoadScene("Game");
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void RelodScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void OpenPanel(GameObject panel)

@@ -7,6 +7,11 @@ public class CameraMove : MonoBehaviour
 
     [SerializeField] Movement playerMovement;
 
+    private void Start()
+    {
+        playerMovement.canMove = true;
+    }
+
     void Update()
     {
         if (playerMovement.canMove)

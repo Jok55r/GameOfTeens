@@ -13,7 +13,7 @@ public class WinLogic : MonoBehaviour
 
     public int timeToScoreValue;
 
-    private void Start()
+    private void Awake()
     {
         panel.SetActive(false);
     }
