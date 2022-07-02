@@ -3874,6 +3874,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[109].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 4443914080101584490, guid: b224e580d29cfc04b9099e70b4a74b5a, type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 4443914080186739877, guid: b224e580d29cfc04b9099e70b4a74b5a, type: 3}
       propertyPath: m_Name
       value: Map1
