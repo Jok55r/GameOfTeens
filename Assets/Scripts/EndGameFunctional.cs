@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class EndGameFunctional : MonoBehaviour
 {
+    [SerializeField] GameObject panel;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        panel.SetActive(true);
         print("putin pidor");
     }
 }
