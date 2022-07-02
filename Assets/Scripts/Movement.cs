@@ -52,4 +52,10 @@ public class Movement : MonoBehaviour
         if (isPlayer)
             isInTriggerOfCar = true;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+        => PlayerHealth.hp--;
+
+    private void OnCollisionStay2D(Collision2D collision)
+        => PlayerHealth.hp--;
 }
