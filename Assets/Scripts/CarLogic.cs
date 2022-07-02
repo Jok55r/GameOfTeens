@@ -16,7 +16,7 @@ public class CarLogic : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && canRide)
+        if (Input.GetKeyDown(KeyCode.F) && canRide && (player.isInTriggerOfCar || car.canMove))
         {
             player.canMove = !player.canMove;
             car.canMove = !car.canMove;

@@ -14,9 +14,11 @@ public class Movement : MonoBehaviour
         gameObject.SetActive(true);
         if (isPlayer)
             canMove = true;
+
+        InvokeRepeating("IsntIn", 0.5f, 0.5f);
     }
 
-    private void FixedUpdate()
+    void IsntIn()
     {
         isInTriggerOfCar = false;
     }
@@ -57,7 +59,7 @@ public class Movement : MonoBehaviour
             gameObject.transform.localScale = new Vector3(5, 5, 1);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (isPlayer)
             isInTriggerOfCar = true;
