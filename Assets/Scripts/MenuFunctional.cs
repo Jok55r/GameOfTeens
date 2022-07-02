@@ -12,11 +12,14 @@ public class MenuFunctional : MonoBehaviour
     [SerializeField] private Slider SFXSld;
 
     [SerializeField] private GameObject tutorialPanel;
+    [SerializeField] private GameObject settingsPanel;
+
     [SerializeField] private AudioSource clickEffect;
         
     private void Start()
     {
         tutorialPanel.SetActive(false);
+        settingsPanel.SetActive(false);
     }
 
     public void StartGame()
