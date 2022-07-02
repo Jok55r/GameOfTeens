@@ -8,7 +8,10 @@ public class EndGameFunctional : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        panel.SetActive(true);
-        print("putin pidor");
+        if (collision.tag == "Finish")
+        {
+            panel.SetActive(true);
+            print("putin pidor");
+        }
     }
 }
