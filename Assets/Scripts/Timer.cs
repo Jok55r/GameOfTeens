@@ -4,8 +4,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public bool timerActive;
-    public float currentTime;
+    public static bool timerActive;
+    public static float currentTime;
 
     public TextMeshProUGUI currentTimeText;
 

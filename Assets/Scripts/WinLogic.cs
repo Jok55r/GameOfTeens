@@ -3,9 +3,6 @@ using TMPro;
 
 public class WinLogic : MonoBehaviour
 {
-    [SerializeField] PlayerHealth hp;
-    [SerializeField] Timer timer;
-
     [SerializeField] GameObject panel;
 
     [SerializeField] TextMeshProUGUI scoreText;
@@ -16,29 +13,26 @@ public class WinLogic : MonoBehaviour
 
     public int timeToScoreValue;
 
-    bool showing;
-
     private void Start()
     {
-        gameObject.SetActive(false);
+        panel.SetActive(false);
     }
 
     private void Update()
     {
-        if (gameObject.activeSelf && !showing)
+        if (panel.activeSelf)
         {
-            timer.timerActive = false;
+            Timer.timerActive = false;
             StartCount();
-            showing = true;
         }
     }
 
     private void StartCount()
     {
-        score = hp.hp + (int)(timeToScoreValue / timer.currentTime);
+        score = PlayerHealth.hp + (int)(timeToScoreValue / Timer.currentTime);
 
         scoreText.text = $"Score: {score}";
-        plusHPText.text = $"+ {hp.hp} HP";
-        plusTimerText.text = $"+ {(int)(timeToScoreValue / timer.currentTime)} time";
+        plusHPText.text = $"+ {PlayerHealth.hp} HP points";
+        plusTimerText.text = $"+ {(int)(timeToScoreValue / Timer.currentTime)} time points";
     }
 }
