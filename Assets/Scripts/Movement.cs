@@ -29,10 +29,11 @@ public class Movement : MonoBehaviour
 
     void CarMove()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        float rotate = Input.GetAxis("Horizontal") * speed * Time.deltaTime * 10;
+        float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
 
-        gameObject.transform.position += new Vector3(x, y, 0f) * speed * Time.deltaTime;
+        gameObject.transform.Translate(0f, move, 0f);
+        gameObject.transform.Rotate(0f, 0f, -rotate);
     }
 
     void PlayerMove()
