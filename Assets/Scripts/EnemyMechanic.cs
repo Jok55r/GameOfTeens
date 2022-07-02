@@ -18,8 +18,7 @@ public class EnemyMechanic : MonoBehaviour
 
     private void Update()
     {
-        //Vector2 targetPos = movement.canMove ? targetPlayer.position : targetVan.position;
-        Vector2 targetPos = targetVan.position;
+        Vector2 targetPos = movement.canMove ? targetPlayer.position : targetVan.position;
         direction = targetPos - (Vector2)transform.position;
         RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, direction, range);
 
