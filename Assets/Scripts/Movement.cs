@@ -55,13 +55,17 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Water" && isPlayer)
+        if (collision.gameObject.tag == "Water" && isPlayer)
+        {
             PlayerHealth.hp--;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Water" && isPlayer)
+        if (collision.gameObject.tag == "Water" && isPlayer)
+        {
             PlayerHealth.hp--;
+        }
     }
 }

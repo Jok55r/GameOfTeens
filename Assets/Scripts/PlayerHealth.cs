@@ -16,9 +16,12 @@ public class PlayerHealth : MonoBehaviour
         slider.value = hp;
     }
 
-    public static void TakeDamage()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        hitEffect.Play();
-        hp--;
+        if(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Water")
+        {
+            hitEffect.Play();
+            hp--;
+        }
     }
 }
