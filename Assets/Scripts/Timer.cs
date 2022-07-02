@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 
     public TextMeshProUGUI currentTimeText;
 
-    void Start()
+    void Awake()
     {
         currentTime = 0;
         StartTimer();

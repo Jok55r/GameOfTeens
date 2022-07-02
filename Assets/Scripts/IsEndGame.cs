@@ -8,6 +8,11 @@ public class IsEndGame : MonoBehaviour
     [SerializeField] private Movement playerMove;
     [SerializeField] private AudioSource winEffect;
 
+    private void Start()
+    {
+        isGameEnd = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Finish")

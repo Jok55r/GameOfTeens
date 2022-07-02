@@ -25,16 +25,6 @@ public class MenuFunctional : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    public void GoToMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void RelodScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void OpenPanel(GameObject panel)
     {
         clickEffect.Play();
