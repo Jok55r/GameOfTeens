@@ -20,9 +20,10 @@ public class WinLogic : MonoBehaviour
 
     private void Update()
     {
-        if (panel.activeSelf)
+        if (IsEndGame.isGameEnd)
         {
             Timer.timerActive = false;
+            panel.SetActive(true);
             StartCount();
         }
     }

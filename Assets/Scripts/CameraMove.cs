@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMove : MonoBehaviour
@@ -12,8 +10,8 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         if (playerMovement.canMove)
-            gameObject.transform.position = player.transform.position;
+            gameObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10f);
         else
-            gameObject.transform.position = car.transform.position;
+            gameObject.transform.position = new Vector3(car.transform.position.x, car.transform.position.y, -10f);
     }
 }

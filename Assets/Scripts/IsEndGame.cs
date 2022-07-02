@@ -8,7 +8,7 @@ public class IsEndGame : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Finish"))
+        if (collision.tag == "Finish")
         {
             isGameEnd = true;
             print("putin pidor");
