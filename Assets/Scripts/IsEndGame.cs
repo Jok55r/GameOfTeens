@@ -5,7 +5,8 @@ using UnityEngine;
 public class IsEndGame : MonoBehaviour
 {
     public static bool isGameEnd = false;
-    [SerializeField] Movement playerMove;
+    [SerializeField] private Movement playerMove;
+    [SerializeField] private AudioSource winEffect;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +14,8 @@ public class IsEndGame : MonoBehaviour
         {
             CarLogic.canRide = false;
             playerMove.canMove = false;
+            winEffect.Play();
+            gameObject.SetActive(false);
             isGameEnd = true;
             print("putin pidor");
         }
