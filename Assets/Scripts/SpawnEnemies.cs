@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject enemyPrefab;
+
+    [SerializeField] private int countOfEnemies;
+
+    private void Start()
     {
-        
+        InvokeRepeating("SpawnEnemy", 1.5f, 3f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnEnemy()
     {
-        
+        Instantiate(enemyPrefab, transform.position, transform.rotation);
     }
 }

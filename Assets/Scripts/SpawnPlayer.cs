@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class SpawnPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject playerPrefab;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        Instantiate(playerPrefab, transform.position, transform.rotation);
     }
 }
