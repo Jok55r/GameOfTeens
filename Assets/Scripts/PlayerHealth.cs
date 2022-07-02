@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] public static AudioSource hitEffect;
+    [SerializeField] private AudioSource hitEffect;
 
     public Slider slider;
 
